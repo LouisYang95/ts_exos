@@ -1,4 +1,4 @@
-# Exo 01 - Résumé d'un utilisateur
+ # Exo 01 - Résumé d'un utilisateur
 
 Voici un petit exercice en TypeScript qui utilise un appel API pour récupérer des données de l'utilisateur à partir d'une API fictive, puis transforme ces informations pour en sortir un résumé.
 

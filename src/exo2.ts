@@ -9,6 +9,16 @@ interface Obj {
 }
 
 export function sortByDate(obj: Obj, desc = false): Subject[] {
-    
-    return []
+    const result: Subject[] = []
+    const keys = Object.keys(obj)
+        keys.sort((a,b) => {
+            if (desc) {
+                return new Date(b).getTime() - new Date(a).getTime()
+            }
+            return new Date(a).getTime() - new Date(b).getTime()
+        })
+    keys.forEach(key => {
+        result.push(obj[key])
+    })
+    return result
 }

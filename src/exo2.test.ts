@@ -1,4 +1,5 @@
 import { randomInt, randomBytes } from 'crypto'
+import {sortByDate} from './exo2'
 
 interface Subject {
     id: number,
@@ -23,7 +24,16 @@ const generateTestObj = (n: number) => {
 }
 
 describe('sortByDate', () => {
-    it('should throw an error if the user is not found', async () => {
-        
+    it('should make code sort by date in DESC', async () => {
+        const obj = generateTestObj(4)
+        console.log(obj)
+        const sortedTab = sortByDate(obj)
+        console.log('tab', sortedTab)
+    })
+    it('should make code sort by date in ASC', async () => {
+        const obj = generateTestObj(4)
+        console.log(obj)
+        const sortedTab = sortByDate(obj, true)
+        console.log('tab', sortedTab)
     })
 })
